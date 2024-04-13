@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es"></html>
+<head>
+    <title>Corcega Experience</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles2.css">
+    <script type="text/javascript" src="../funciones.js"></script>
+    <link rel="icon" type="image/x-icon" href="../Imagenes/OIG.jpeg">
+    <style> 
+    #contenido{
+        display: flex;
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no hay suficiente espacio */
+        justify-content: space-around; /* Distribuye el espacio disponible entre los elementos */
+        margin-bottom: 300px;
+    }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="barra"> 
+            <button id="botonDesplegar"> <img src="../iconos/sidebar.svg"> </button>
+            <div class="barra-lateral" id="miBarra">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="quienessomos.html">Quienes Somos</a></li>
+                    <li><a href="planes.html">Nuestros Planes</a></li>
+                    <li><a href="corcega.html">Corcega</a></li>
+                    <li><a href="experiencia.html">Como es la experiencia</a></li>
+                    <li><a href="ustedes.html">Ustedes</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                </ul>   
+                <p id="nombre2">Corcega Experience TM</p>
+            </div>
+        </div>
+
+        <button class="tarjeta-boton" id="carrito" onclick="redirigirALink()"> <img src="../iconos/-shopping-cart_90604.svg"> </button>
+
+        <div id="contenido">
+
+            <h1>Planes Corcega</h1> 
+
+            
+            
+            <div id="tarjetaOro">
+                <div class="tarjeta">
+                    <img class="tarjeta-imagen" src="../ImagenesPlanes/_c2b8d0f8-923c-45e6-99e9-2e6fbec2bb33.jpeg" alt="Descripción de la imagen">
+                    <div class="tarjeta-contenido">
+                        <h2 class="tarjeta-titulo">Tarjeta Oro</h2>
+                        <p class="tarjeta-descripcion">Disfruta del esplendor del viaje con nuestra Tarjeta Oro. Sumérgete en el lujo de la clase ejecutiva, donde los asientos reclinables te brindarán la comodidad que mereces. Deléitate con exquisitas comidas gourmet mientras navegas por las nubes. Además, nuestro nivel de seguros ofrece una cobertura completa, desde cancelaciones imprevistas hasta asistencia médica global, asegurando tu tranquilidad en cada etapa del viaje.</p>
+                        <p class="tarjeta-precio">$7,500 por persona</p>
+                        <button class="tarjeta-boton" onclick="agregarAlCarrito('Trajeta Oro', '7500')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tarjetaPlata">
+                <div class="tarjeta">
+                    <img class="tarjeta-imagen" src="../ImagenesPlanes/_ee371c47-5dae-4c7c-93b9-fe30e7011f09.jpeg" alt="Descripción de la imagen">
+                    <div class="tarjeta-contenido">
+                        <h2 class="tarjeta-titulo">Tarjeta Plata</h2>
+                        <p class="tarjeta-descripcion">Con la Tarjeta Plata, experimenta la elegancia de la clase económica premium. Disfruta de asientos cómodos y con más espacio para las piernas, junto con opciones mejoradas de entretenimiento a bordo. Nuestro nivel de lujo se refleja en un servicio de comidas mejorado, brindándote una experiencia única en cada vuelo. La cobertura estándar de seguros garantiza tu seguridad y bienestar durante todo el viaje.</p>
+                        <p class="tarjeta-precio">$3,500 por persona</p>
+                        <button class="tarjeta-boton" onclick="agregarAlCarrito('Tarjeta Plata', '3500')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tarjetaExpress">
+                <div class="tarjeta">
+                    <img class="tarjeta-imagen" src="../ImagenesPlanes/_4c5d3456-05e5-45bd-96c1-e32e3b16b324.jpeg" alt="Descripción de la imagen">
+                    <div class="tarjeta-contenido">
+                        <h2 class="tarjeta-titulo">Tarjeta Express</h2>
+                        <p class="tarjeta-descripcion">Vive la rapidez con la Tarjeta Express, diseñada para aquellos que valoran su tiempo. Disfruta de vuelos directos que te llevan rápidamente a tu destino. Con opciones de comida rápida a bordo y prioridad de embarque, maximizamos tu eficiencia y confort. La cobertura esencial de seguros proporciona la tranquilidad necesaria para tus viajes exprés.</p>
+                        <p class="tarjeta-precio">$1,800 por persona</p>
+                        <button class="tarjeta-boton" onclick="agregarAlCarrito('Tarjeta Express', '1800')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tarjetaAmorDeLaCorrea">
+                <div class="tarjeta">
+                    <img class="tarjeta-imagen" src="../ImagenesPlanes/_7222e1af-f939-4c19-a47a-6fb7156edab0.jpeg" alt="Descripción de la imagen">
+                    <div class="tarjeta-contenido">
+                        <h2 class="tarjeta-titulo">Tarjeta Amor De La Correa</h2>
+                        <p class="tarjeta-descripcion">Embárcate en viajes románticos con la Tarjeta Amor De La Correa. Experimenta la intimidad con asientos dobles y ventanas panorámicas que ofrecen vistas impresionantes. Nuestro servicio personalizado incluye champán a bordo y cenas íntimas para crear recuerdos inolvidables. La cobertura especial para parejas agrega un toque romántico a cada aspecto del viaje.</p>
+                        <p class="tarjeta-precio">$9,500 por pareja</p>
+                        <button class="tarjeta-boton" onclick="agregarAlCarrito('Tarjeta Amor De La Correa', '9500')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tarjetaAmorMarama">
+                <div class="tarjeta">
+                    <img class="tarjeta-imagen" src="../ImagenesPlanes/_5cc2801d-08d9-4beb-aed5-ced828949ef0.jpeg" alt="Descripción de la imagen">
+                    <div class="tarjeta-contenido">
+                        <h2 class="tarjeta-titulo">Tarjeta Amor Marama</h2>
+                        <p class="tarjeta-descripcion">Descubre el amor y la aventura con la Tarjeta Amor Marama. Explora destinos exóticos y emocionantes, disfrutando de alojamientos exclusivos y experiencias únicas. La cobertura completa para actividades aventureras y la asistencia multilingüe garantizan una travesía sin preocupaciones para parejas que buscan emociones auténticas.</p>
+                        <p class="tarjeta-precio">$12,000 por pareja</p>
+                        <button class="tarjeta-boton" onclick="agregarAlCarrito('Tarjeta Amor Marama', '12000')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tarjetaPlatino">
+                <div class="tarjeta">
+                    <img class="tarjeta-imagen" src="../ImagenesPlanes/_39bfa76f-fa9a-480a-92a7-0ecdfa8a159f.jpeg" alt="Descripción de la imagen">
+                    <div class="tarjeta-contenido">
+                        <h2 class="tarjeta-titulo">Tarjeta Platino</h2>
+                        <p class="tarjeta-descripcion">La Tarjeta Platino redefine la elegancia con vuelos privados y experiencias personalizadas. Experimenta la exclusividad con un chef privado a bordo y servicio de limusina. Cada detalle, desde la selección del itinerario hasta los lujosos alojamientos, se adapta a tus preferencias. La cobertura premium de seguros ofrece tranquilidad absoluta, sin importar la ocasión.</p>
+                        <p class="tarjeta-precio">$20,000 por persona</p>
+                        <button class="tarjeta-boton" onclick="agregarAlCarrito('Tarjeta Platino', '20000')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tarjetaAdamantium">
+                <div class="tarjeta">
+                    <img class="tarjeta-imagen" src="../ImagenesPlanes/_535f6ca6-454f-4b94-94ce-a42ef8a5fbe4.jpeg" alt="Descripción de la imagen">
+                    <div class="tarjeta-contenido">
+                        <h2 class="tarjeta-titulo">Tarjeta Adamantium</h2>
+                        <p class="tarjeta-descripcion">Eleva tus expectativas con la Tarjeta Adamantium, que te lleva a nuevas alturas en viajes ultrarrápidos. Sumérgete en una experiencia futurista con entretenimiento holográfico y una oferta culinaria única. Nuestra cobertura de vanguardia con tecnología de seguimiento en tiempo real y asistencia 24/7 de conserjería virtual redefine la seguridad y la comodidad en los viajes modernos.</p>
+                        <p class="tarjeta-precio">$40,000 por persona</p>
+                        <button class="tarjeta-boton" onclick="agregarAlCarrito('Tarjeta Adamantium', '40000')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+
+    </div>   
+
+    <div class="barrita"></div>
+
+    <footer class="footer">
+        <ul>
+            <li><a href="">redes</a></li>
+            <li>Corcega Experience TM</li>
+            <li>Derechos resrvados Fausto Bilo IND.</li>
+        </ul>
+    </footer>  
+
+          
+</body>
+</html>
